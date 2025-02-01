@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Facebook</title>
+        <style>
+            body {
+                background-color: #18191a;
+                color: #e4e6eb;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 900px;
+                flex-grow: 1;
+            }
+            .text-section {
+                max-width: 400px;
+            }
+            .text-section h1 {
+                color: #1877f2;
+                font-size: 50px;
+                margin: 0;
+            }
+            .text-section p {
+                font-size: 20px;
+            }
+            .auth-box {
+                background-color: #242526;
+                padding: 20px;
+                border-radius: 8px;
+                width: 350px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #3a3b3c;
+                border-radius: 5px;
+                background-color: #3a3b3c;
+                color: #e4e6eb;
+                font-size: 16px;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            .login-btn {
+                background-color: #1877f2;
+                color: white;
+            }
+            .login-btn:hover {
+                background-color: #166fe5;
+            }
+            .forgot-password {
+                display: block;
+                margin: 10px 0;
+                color: #b0b3b8;
+                text-decoration: none;
+            }
+            .forgot-password:hover {
+                text-decoration: underline;
+            }
+            .signup-btn {
+                background-color: #42b72a;
+                color: white;
+                width: 50%;
+            }
+            .signup-btn:hover {
+                background-color: #36a420;
+            }
+            .footer {
+                width: 100%;
+                background-color: #242526;
+                text-align: center;
+                padding: 15px 0;
+                position: absolute;
+                bottom: 0;
+            }
+            .footer a {
+                color: #b0b3b8;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 14px;
+            }
+            .footer a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="text-section">
+                <h1>facebook</h1>
+                <p>
+                    Facebook помогает вам всегда оставаться на связи и общаться
+                    со своими знакомыми.
+                </p>
+            </div>
+            <div class="auth-box">
+                <input
+                    type="text"
+                    placeholder="Электронный адрес или номер телефона"
+                />
+                <input type="password" placeholder="Пароль" />
+                <button class="login-btn">Вход</button>
+                <a href="https://ru-ru.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0" class="forgot-password">Забыли пароль?</a>
+                
+                <a href= "https://ru-ru.facebook.com/r.php?entry_point=login"><button class="signup-btn">Создать аккаунт</button></a>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://ru-ru.facebook.com/?locale=ru_RU">Русский</a>
+            <a href="https://www.facebook.com/?locale=en_US">English</a>
+            <a href="https://tr-tr.facebook.com/?locale=tr_TR">Türkçe</a>
+            <a href="https://id-id.facebook.com/?locale=id_ID">Bahasa Indonesia</a>
+            <a href="https://es-la.facebook.com/?locale=es_LA">Español</a>
+            <a href="https://de-de.facebook.com/?locale=de_DE">Deutsch</a>
+            <a href="https://kk-kz.facebook.com/?locale=kk_KZ">Қазақша</a>
+        </div>
+    </body>
+</html>
