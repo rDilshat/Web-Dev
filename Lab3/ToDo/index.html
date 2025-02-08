@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>
+            ToDo
+        </title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .footer {
+                width: 100%;
+                background-color: black;
+                position: absolute;
+            }
+            .footer p {
+                color: grey;
+                text-align: left;
+                padding-left: 100px;
+                font-size: 20px;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                min-height: 110vh;
+            }
+            .text-section p {
+                font-size: 45px;
+                padding-top: 60px;
+                padding-right: 650px;
+            }
+            .main {
+                margin-bottom: auto;
+            }
+            input {
+                width: 550px;
+                height: 35px;
+                border: 1px solid grey;
+                border-radius: 5px;
+            }
+            button {
+                width: 55px;
+                height: 40px;
+                background-color: rgb(3, 95, 170);
+                color: white;
+                border: 1px solid grey;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }   
+
+            .task {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                width: 550px;
+                gap: 10px;
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                margin-top: 10px;
+            }
+
+            .task input[type="checkbox"] {
+                margin: 0;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+
+            .task span {
+                flex-grow: 1;
+                text-align: left;
+                font-size: 18px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-left: 50px;
+            }
+
+            .task button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .task button img {
+                width: 20px;
+                height: 20px;
+                display: block;
+            }
+            .done {
+                text-decoration: line-through;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class = "footer">
+            <p>ToDo List</p>
+        </div>
+        <div class = "container">
+            <div class = "text-section">
+                <p>ToDo List</p>
+            </div>
+            <div class = "main">
+                <input type = "text" id = "taskInput" placeholder="New Task">
+                <button onclick="addTask()">Add</button>
+                <ul id="taskList"></ul>
+            </div>
+        </div>
+        <script>
+            function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value.trim();
+            if (taskText === '') return;
+
+            const taskList = document.getElementById('taskList');
+            const li = document.createElement('li');
+            li.className = 'task';
+            li.innerHTML = `
+                <input type="checkbox" onclick="toggleTask(this)">
+                <span>${taskText}</span>
+                <button onclick="deleteTask(this)"><img src = "https://cdn-icons-png.flaticon.com/512/9713/9713380.png" width = "20"></button>
+            `;
+            taskList.appendChild(li);
+            taskInput.value = '';
+            }
+
+            function toggleTask(checkbox) {
+                checkbox.nextElementSibling.classList.toggle('done', checkbox.checked);
+            }
+
+            function deleteTask(button) {
+                button.parentElement.remove();
+            }
+        </script>
+    </body>
+</html>
