@@ -1,0 +1,12 @@
+<div *ngIf="product">
+    <h2>{{ product.name }}</h2>
+    <img [src]="product.imageUrl" [alt]="product.name" width="300">
+    <p>Цена: {{ product.price | number }} ₸</p>
+    <hr>
+    <p>{{ product.description }}</p>
+
+    <button id="whatsap" (click)="shareOnWhatsApp()">Поделиться в WhatsApp</button>
+    <button id="telegram" (click)="shareOnTelegram()">Поделиться в Telegram</button>
+
+    <button (click)="goHome()">Вернуться на главную</button>
+</div>
