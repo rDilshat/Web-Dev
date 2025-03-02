@@ -1,0 +1,42 @@
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.album-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+}
+
+.album-card h3 {
+  font-size: 18px;
+}
+
+.album-card a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.album-card button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.album-card button:hover {
+  background: darkred;
+}
+
+button {
+    font-weight: bold;
+}

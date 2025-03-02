@@ -1,0 +1,21 @@
+<!-- <h2>Albums</h2>
+<button (click)="createAlbum()">➕ Add Album</button>
+<div class="albums-container">
+  <p *ngIf="albums.length === 0">Загрузка альбомов...</p>
+  <div class="album-card" *ngFor="let album of albums">
+    <h3>{{ album.title }}</h3>
+    <a [routerLink]="['/albums', album.id]">View details</a>
+    <button (click)="deleteAlbum(album.id)">Delete</button>
+  </div>
+</div> -->
+
+<h2>Albums</h2>
+<button (click)="createAlbum()">➕ Add Album</button>
+
+<div class="albums-container">
+  <div class="album-card" *ngFor="let album of albums">
+    <h3>{{ album.title }}</h3>
+    <a [routerLink]="['/albums', album.id]">View Details</a>
+    <button (click)="deleteAlbum(album.id)">Delete</button>
+  </div>
+</div>
